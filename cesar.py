@@ -77,7 +77,7 @@ def brute_force(encoded, s_range):
     # Tri des mots par longueur
     words = sorted(words, key=len)[::-1]
     # Boucle de test de 0 à s_range : test des différents décalages
-    for shift in range(s_range):
+    for shift in range(-s_range, s_range):
         biggest_shift[str(shift)] = 0
         # Pour chaque mot de la chaine cryptée
         for word in words:
