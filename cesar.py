@@ -88,7 +88,8 @@ def brute_force(encoded, s_range):
                 # Si le mot existe, l'enregistrer dans un tableau
                 # avec le décalage correspondant
                 moved = moved.rstrip('\n').lower()
-                if (dicoWord.rstrip('\n').lower() == moved):
+                dicoWordForm = dicoWord.rstrip('\n').lower()
+                if (dicoWordForm == moved):
                     found.append([moved, -shift])
     # Afficher les mots trouvés avec leur décalage d'origine
     for i in range(len(found)):
